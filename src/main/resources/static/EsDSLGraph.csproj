@@ -1,0 +1,214 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FEEA5C7-9B72-4CD0-9AA8-5E31A40411FF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EsDSLGraph</RootNamespace>
+    <AssemblyName>EsDSLGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="lib\ace\1.4.7\ace.js" />
+    <Content Include="lib\ace\1.4.7\ext-beautify.js" />
+    <Content Include="lib\ace\1.4.7\ext-elastic_tabstops_lite.js" />
+    <Content Include="lib\ace\1.4.7\ext-emmet.js" />
+    <Content Include="lib\ace\1.4.7\ext-error_marker.js" />
+    <Content Include="lib\ace\1.4.7\ext-keybinding_menu.js" />
+    <Content Include="lib\ace\1.4.7\ext-language_tools.js" />
+    <Content Include="lib\ace\1.4.7\ext-linking.js" />
+    <Content Include="lib\ace\1.4.7\ext-modelist.js" />
+    <Content Include="lib\ace\1.4.7\ext-options.js" />
+    <Content Include="lib\ace\1.4.7\ext-prompt.js" />
+    <Content Include="lib\ace\1.4.7\ext-rtl.js" />
+    <Content Include="lib\ace\1.4.7\ext-searchbox.js" />
+    <Content Include="lib\ace\1.4.7\ext-settings_menu.js" />
+    <Content Include="lib\ace\1.4.7\ext-spellcheck.js" />
+    <Content Include="lib\ace\1.4.7\ext-split.js" />
+    <Content Include="lib\ace\1.4.7\ext-static_highlight.js" />
+    <Content Include="lib\ace\1.4.7\ext-statusbar.js" />
+    <Content Include="lib\ace\1.4.7\ext-textarea.js" />
+    <Content Include="lib\ace\1.4.7\ext-themelist.js" />
+    <Content Include="lib\ace\1.4.7\ext-whitespace.js" />
+    <Content Include="lib\ace\1.4.7\keybinding-emacs.js" />
+    <Content Include="lib\ace\1.4.7\keybinding-sublime.js" />
+    <Content Include="lib\ace\1.4.7\keybinding-vim.js" />
+    <Content Include="lib\ace\1.4.7\mode-json.js" />
+    <Content Include="lib\ace\1.4.7\theme-twilight.js" />
+    <Content Include="lib\ace\1.4.7\theme-vibrant_ink.js" />
+    <Content Include="lib\ace\1.4.7\theme-xcode.js" />
+    <Content Include="lib\ace\1.4.7\worker-coffee.js" />
+    <Content Include="lib\ace\1.4.7\worker-css.js" />
+    <Content Include="lib\ace\1.4.7\worker-html.js" />
+    <Content Include="lib\ace\1.4.7\worker-javascript.js" />
+    <Content Include="lib\ace\1.4.7\worker-json.js" />
+    <Content Include="lib\ace\1.4.7\worker-lua.js" />
+    <Content Include="lib\ace\1.4.7\worker-php.js" />
+    <Content Include="lib\ace\1.4.7\worker-xml.js" />
+    <Content Include="lib\ace\1.4.7\worker-xquery.js" />
+    <Content Include="lib\angularjs\1.8.0\angular.js" />
+    <Content Include="lib\angularjs\1.8.0\angular.min.js" />
+    <Content Include="lib\bootstrap\4.5.0\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\4.5.0\css\bootstrap.min.css" />
+    <Content Include="lib\icheck-bootstrap\3.0.1\icheck-bootstrap.css" />
+    <Content Include="lib\icheck-bootstrap\3.0.1\icheck-bootstrap.min.css" />
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="lib\jquery\3.5.1\jquery-3.5.1-vsdoc.js" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.js" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.min.js" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.slim.js" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.slim.min.js" />
+    <Content Include="lib\sweetalert\2.1.0\sweetalert.min.js" />
+    <Content Include="scripts\app.js" />
+    <Content Include="scripts\directive\VisualBoolQueryDirective.html" />
+    <Content Include="scripts\directive\VisualBoolQueryDirective.js" />
+    <Content Include="scripts\directive\VisualConditionDirective.html" />
+    <Content Include="scripts\directive\VisualConditionDirective.js" />
+    <Content Include="scripts\directive\VisualConstantScoreDirective.html" />
+    <Content Include="scripts\directive\VisualConstantScoreDirective.js" />
+    <Content Include="scripts\directive\VisualExistsDirective.html" />
+    <Content Include="scripts\directive\VisualExistsDirective.js" />
+    <Content Include="scripts\directive\VisualFilterDirective.html" />
+    <Content Include="scripts\directive\VisualFilterDirective.js" />
+    <Content Include="scripts\directive\VisualIdsDirective.html" />
+    <Content Include="scripts\directive\VisualIdsDirective.js" />
+    <Content Include="scripts\directive\VisualMatchDirective.html" />
+    <Content Include="scripts\directive\VisualMatchDirective.js" />
+    <Content Include="scripts\directive\VisualMatchPhraseDirective.html" />
+    <Content Include="scripts\directive\VisualMatchPhraseDirective.js" />
+    <Content Include="scripts\directive\VisualMultiMatchDirective.html" />
+    <Content Include="scripts\directive\VisualMultiMatchDirective.js" />
+    <Content Include="scripts\directive\VisualQueryDirective.html" />
+    <Content Include="scripts\directive\VisualQueryDirective.js" />
+    <Content Include="scripts\directive\VisualRangeDirective.html" />
+    <Content Include="scripts\directive\VisualRangeDirective.js" />
+    <Content Include="scripts\directive\VisualRequestDirective.html" />
+    <Content Include="scripts\directive\VisualRequestDirective.js" />
+    <Content Include="scripts\directive\VisualScriptDirective.html" />
+    <Content Include="scripts\directive\VisualScriptDirective.js" />
+    <Content Include="scripts\directive\VisualTermDirective.html" />
+    <Content Include="scripts\directive\VisualTermDirective.js" />
+    <Content Include="scripts\directive\VisualTermsDirective.html" />
+    <Content Include="scripts\directive\VisualTermsDirective.js" />
+    <Content Include="scripts\es-dsl-graph.js" />
+    <Content Include="scripts\es-dsl-graph.min.js">
+      <DependentUpon>es-dsl-graph.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\view\view_menu.html" />
+    <Content Include="scripts\view\view_thead_list.html" />
+    <Content Include="scripts\view\view_welcome.html" />
+    <Content Include="styles\es-dsl-graph.css">
+      <DependentUpon>es-dsl-graph.less</DependentUpon>
+    </Content>
+    <Content Include="styles\es-dsl-graph.min.css">
+      <DependentUpon>es-dsl-graph.css</DependentUpon>
+    </Content>
+    <Content Include="web.config" />
+    <Content Include="styles\es-dsl-graph.less" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\angularjs\1.8.0\angular.min.js.map" />
+    <Content Include="lib\bootstrap\4.5.0\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\4.5.0\css\bootstrap.min.css.map" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.min.map" />
+    <Content Include="lib\jquery\3.5.1\jquery-3.5.1.slim.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64145</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64145/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

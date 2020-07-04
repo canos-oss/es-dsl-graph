@@ -1,0 +1,28 @@
+[
+  {
+    "minify": {
+      "enabled": true,
+      "renameLocals": false
+    },
+    "outputFileName": "scripts/es-dsl-graph.js",
+    "inputFiles": [
+      "scripts/directive/VisualQueryDirective.js",
+      "scripts/directive/VisualRangeDirective.js",
+      "scripts/directive/VisualRequestDirective.js",
+      "scripts/directive/VisualScriptDirective.js",
+      "scripts/directive/VisualTermDirective.js",
+      "scripts/directive/VisualTermsDirective.js",
+      "scripts/directive/VisualBoolQueryDirective.js",
+      "scripts/directive/VisualConditionDirective.js",
+      "scripts/directive/VisualConstantScoreDirective.js",
+      "scripts/directive/VisualExistsDirective.js",
+      "scripts/directive/VisualFilterDirective.js",
+      "scripts/directive/VisualIdsDirective.js",
+      "scripts/directive/VisualMatchDirective.js",
+      "scripts/directive/VisualMatchPhraseDirective.js",
+      "scripts/directive/VisualMultiMatchDirective.js",
+
+      "scripts/app.js"
+    ]
+  }
+]

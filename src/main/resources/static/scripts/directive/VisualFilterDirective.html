@@ -1,0 +1,23 @@
+﻿<div class="visual-panel" style="border:none">
+    <!--<div class="visual-head"><div>Filter</div></div>-->
+    <div class="visual-body" style="border:none;padding:0">
+
+        <visual-terms item="item.terms" ng-if="item.terms"></visual-terms>
+
+        <visual-term item="item.term" ng-if="item.term"></visual-term>
+
+        <visual-exists item="item.exists" ng-if="item.exists"></visual-exists>
+
+        <visual-match-phrase item="item.match_phrase" ng-if="item.match_phrase"></visual-match-phrase>
+
+        <visual-bool-query item="item.bool" ng-if="item.bool"></visual-bool-query>
+
+        <visual-match item="item.match" ng-if="item.match"></visual-match>
+
+        <visual-multi-match item="item.multi_match" ng-if="item.multi_match"></visual-multi-match>
+
+        <visual-constant-score item="item.constant_score" ng-if="item.constant_score"></visual-constant-score>
+
+        <visual-range item="item.range" ng-if="item.range"></visual-range>
+    </div>
+</div>

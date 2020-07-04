@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ES DSL Graph</title>
+    <link href="./lib/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./lib/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="./styles/es-dsl-graph.min.css?v=2020070401" rel="stylesheet" />
+</head>
+<body ng-app="app" ng-controller="controller">
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">ES DSL Graph</h5>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div style="text-align: end">
+                    <div class="icheck-primary icheck-inline">
+                        <input type="radio" id="layoutLeftWidth2" name="layoutLeftWidth" ng-model="layoutLeftWidth" ng-value="layoutLeftWidth_4_8" />
+                        <label for="layoutLeftWidth2">4 : 8</label>
+                    </div>
+                    <div class="icheck-primary icheck-inline">
+                        <input type="radio" id="layoutLeftWidth4" name="layoutLeftWidth" ng-model="layoutLeftWidth" ng-value="layoutLeftWidth_8_4" />
+                        <label for="layoutLeftWidth4">8 : 4</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-class="layoutLeftWidth">
+                <div class="card">
+                    <div class="card-header">DSL</div>
+                    <div class="card-body">
+                        <p>
+                            <button class="btn btn-outline-primary" ng-click="formatNow()">Format</button>
+                        </p>
+                        <div id="aceditor"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">Graph</div>
+                    <div class="card-body">
+                        <div class="visual-root" ng-mousemove="move()">
+                            <p ng-if="!request">Fill in DSL on the left and then click `Format`.</p>
+                            <visual-request item="request" ng-if="request"></visual-request>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/angularjs/1.8.0/angular.min.js"></script>
+    <script src="./lib/jquery/3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="./lib/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="./lib/ace/1.4.7/ace.js"></script>
+
+    <script src="./scripts/es-dsl-graph.min.js?v=2020070401"></script>
+    <script>
+        window.releaseNo = 2020070401;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿.visual-panel {
+    border: 1px solid #000;
+    display: flex;
+
+    .visual-head {
+        color: #aaa;
+        vertical-align: top;
+    }
+
+    .visual-body {
+        padding: 3px;
+        flex: 1;
+    }
+
+    &.active {
+        background-color: #ddd;
+
+        .visual-head {
+            color: #000;
+        }
+    }
+}
+
+.visual-single {
+    border: 1px solid #000;
+}
+
+.visual_must {
+    border: 1px solid #f00;
+    padding-left: 20px;
+
+    &:before {
+        content: 'must';
+        margin-left: -20px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}
+
+.visual_should {
+    border: 1px solid #0f0;
+    padding-left: 20px;
+
+    &:before {
+        content: 'should';
+        margin-left: -20px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}
+
+.visual_filter {
+    border: 1px solid #00f;
+    padding-left: 20px;
+
+    &:before {
+        content: 'filter';
+        margin-left: -20px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}

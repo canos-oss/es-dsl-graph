@@ -1,0 +1,18 @@
+﻿<div class="visual-panel" style="border:0;padding:0;">
+    <!--<div class="visual-head"><div>BoolQuery</div></div>-->
+    <div class="visual-body" style="padding:0">
+
+        <div class="visual_must" ng-if="item.must">
+            <visual-condition item="x" ng-repeat="x in item.must"></visual-condition>
+        </div>
+
+        <div class="visual_should" ng-if="item.should">
+            <visual-condition item="x" ng-repeat="x in item.should"></visual-condition>
+        </div>
+
+        <div class="visual_filter" ng-if="item.filter">
+            <visual-condition item="x" ng-repeat="x in item.filter"></visual-condition>
+        </div>
+
+    </div>
+</div>

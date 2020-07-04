@@ -1,0 +1,23 @@
+﻿<div class="visual-panel" style="border:0">
+    <!--<div class="visual-head"><div>Condition</div></div>-->
+    <div class="visual-body" style="border:0">
+
+        <visual-constant-score item="item.constant_score" ng-if="item.constant_score"></visual-constant-score>
+
+        <visual-bool-query item="item.bool" ng-if="item.bool"></visual-bool-query>
+
+        <visual-term item="item.term" ng-if="item.term"></visual-term>
+
+        <visual-terms item="item.terms" ng-if="item.terms"></visual-terms>
+
+        <visual-ids item="item.ids" ng-if="item.ids"></visual-ids>
+
+        <visual-match item="item.match" ng-if="item.match"></visual-match>
+
+        <visual-multi-match item="item.multi_match" ng-if="item.multi_match"></visual-multi-match>
+
+        <visual-script item="item.script" ng-if="item.script"></visual-script>
+
+        <visual-range item="item.range" ng-if="item.range"></visual-range>
+    </div>
+</div>
