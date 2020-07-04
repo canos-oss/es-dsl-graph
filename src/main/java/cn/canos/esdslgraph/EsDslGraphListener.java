@@ -17,7 +17,7 @@ public class EsDslGraphListener implements ServletContextListener {
 
         System.out.println("es-dsl-graph contextInitialized");
 
-        FilterRegistration.Dynamic filterRegistration = sce.getServletContext().addFilter("healthFilter", EsDslGraphFilter.class);
+        FilterRegistration.Dynamic filterRegistration = sce.getServletContext().addFilter("esDslGraphFilter", EsDslGraphFilter.class);
 
         filterRegistration.addMappingForUrlPatterns(null, false, "/es-dsl-graph/*");
     }
