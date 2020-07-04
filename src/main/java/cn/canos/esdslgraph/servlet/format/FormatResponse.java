@@ -1,4 +1,6 @@
-package cn.canos.esdslgraph;
+package cn.canos.esdslgraph.servlet.format;
+
+import cn.canos.esdslgraph.servlet.ResponseBase;
 
 /**
  * @author harriszhang@live.cn

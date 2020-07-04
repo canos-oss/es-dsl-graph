@@ -1,4 +1,4 @@
-package cn.canos.esdslgraph;
+package cn.canos.esdslgraph.servlet.format;
 
 /**
  * @author harriszhang@live.cn

@@ -10,14 +10,14 @@ import javax.servlet.annotation.WebListener;
  * @date 2020/7/4.
  */
 @WebListener
-public class HealthListener implements ServletContextListener {
+public class EsDslGraphListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
         System.out.println("es-dsl-graph contextInitialized");
 
-        FilterRegistration.Dynamic filterRegistration = sce.getServletContext().addFilter("healthFilter", HealthFilter.class);
+        FilterRegistration.Dynamic filterRegistration = sce.getServletContext().addFilter("healthFilter", EsDslGraphFilter.class);
 
         filterRegistration.addMappingForUrlPatterns(null, false, "/es-dsl-graph/*");
     }

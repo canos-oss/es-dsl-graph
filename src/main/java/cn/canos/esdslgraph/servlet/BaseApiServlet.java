@@ -22,9 +22,9 @@ public abstract class BaseApiServlet extends HttpServlet {
 
     protected static <T> T parseRequest(HttpServletRequest request, Class<T> classOfT) throws IOException, IllegalAccessException, InstantiationException {
 
-        String defaultCharset = System.getProperty("sun.jnu.encoding");
-        Charset fileCharset = defaultCharset != null ? Charset.forName(defaultCharset) : Charset.defaultCharset();
-        Scanner s = new Scanner(request.getInputStream(), fileCharset.name()).useDelimiter("\\A");
+        //String defaultCharset = System.getProperty("sun.jnu.encoding");
+        //Charset fileCharset = defaultCharset != null ? Charset.forName(defaultCharset) : Charset.defaultCharset();
+        Scanner s = new Scanner(request.getInputStream(), CHARSET.name()).useDelimiter("\\A");
         String content = s.hasNext() ? s.next() : "";
         if (Strings.isNullOrEmpty(content)) {
             return classOfT.newInstance();

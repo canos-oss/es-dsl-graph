@@ -1,9 +1,8 @@
-package cn.canos.esdslgraph.servlet;
+package cn.canos.esdslgraph.servlet.format;
 
-import cn.canos.esdslgraph.FormatRequest;
-import cn.canos.esdslgraph.FormatResponse;
 import cn.canos.esdslgraph.adapter.*;
 import cn.canos.esdslgraph.elasticsearch.*;
+import cn.canos.esdslgraph.servlet.BaseApiServlet;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.nio.charset.Charset;
 
 /**
@@ -53,13 +54,35 @@ public class FormatServlet extends BaseApiServlet {
         }
 
         Request esRequest;
-        String esRequestString;
         try {
             esRequest = specialGson.fromJson(formatRequest.getContent(), Request.class);
+        } catch (Exception e) {
+            FormatResponse formatResponse = new FormatResponse();
+            formatResponse.setMessage("format error, maybe invalid es dsl.");
+
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            String stackTrace = sw.toString();
+            formatResponse.setStackTrace(stackTrace);
+
+            setResponse(httpServletResponse, formatResponse);
+            return;
+        }
+
+        String esRequestString;
+        try {
             esRequestString = normalGson.toJson(esRequest);
         } catch (Exception e) {
             FormatResponse formatResponse = new FormatResponse();
             formatResponse.setMessage("format error, maybe invalid es dsl.");
+
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            String stackTrace = sw.toString();
+            formatResponse.setStackTrace(stackTrace);
+
             setResponse(httpServletResponse, formatResponse);
             return;
         }

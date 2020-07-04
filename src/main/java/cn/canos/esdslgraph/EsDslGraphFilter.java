@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author harriszhang@live.cn
  * @date 2020/7/4.
  */
-public class HealthFilter implements Filter {
+public class EsDslGraphFilter implements Filter {
 
     private ApiServlet apiServlet;
     private StaticResourceServlet staticResourceServlet;

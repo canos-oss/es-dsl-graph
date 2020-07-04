@@ -1,4 +1,4 @@
-package cn.canos.esdslgraph;
+package cn.canos.esdslgraph.servlet;
 
 /**
  * @author harriszhang@live.cn
@@ -19,6 +19,11 @@ public abstract class ResponseBase {
      */
     private String message;
 
+    /**
+     * e.printStackTrace();
+     */
+    private String stackTrace;
+
     public int getStatusCode() {
         return statusCode;
     }
@@ -33,5 +38,13 @@ public abstract class ResponseBase {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getStackTrace() {
+        return stackTrace;
+    }
+
+    public void setStackTrace(String stackTrace) {
+        this.stackTrace = stackTrace;
     }
 }
