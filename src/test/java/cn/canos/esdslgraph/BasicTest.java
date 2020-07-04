@@ -2,8 +2,6 @@ package cn.canos.esdslgraph;
 
 import cn.canos.esdslgraph.adapter.*;
 import cn.canos.esdslgraph.elasticsearch.*;
-import cn.savory.health.elasticsearch.*;
-import cn.savory.health.adapter.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.junit.Test;
