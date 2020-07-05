@@ -2,7 +2,6 @@ package cn.canos.esdslgraph.servlet;
 
 /**
  * @author harriszhang@live.cn
- * @date 2020/7/4.
  */
 public class FormatResponse {
 

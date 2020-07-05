@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * @author harriszhang@live.cn
- * @date 2020/7/4.
  */
 public class Term {
     @SerializedName("name")

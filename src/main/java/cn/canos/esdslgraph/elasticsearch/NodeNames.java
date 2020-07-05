@@ -2,7 +2,6 @@ package cn.canos.esdslgraph.elasticsearch;
 
 /**
  * @author harriszhang@live.cn
- * @date 2020/7/4.
  */
 public class NodeNames {
     public static final String Name = "name";

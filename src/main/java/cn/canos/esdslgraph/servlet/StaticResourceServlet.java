@@ -12,7 +12,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author harriszhang@live.cn
- * @date 2020/7/4.
  */
 @WebServlet(urlPatterns = "/es-dsl-graph/*")
 public class StaticResourceServlet extends HttpServlet {

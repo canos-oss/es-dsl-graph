@@ -11,7 +11,6 @@ import java.util.Map;
 
 /**
  * @author harriszhang@live.cn
- * @date 2020/7/4.
  */
 public class TermsDeserializer implements JsonDeserializer<Terms> {
 
