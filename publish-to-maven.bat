@@ -6,7 +6,7 @@ if "%a%"=="y" Goto deploy
 goto end
 
 :deploy
-call mvn clean install
+call mvn clean deploy -Dgpg.skip=false
 goto end
 
 :end
