@@ -4,7 +4,9 @@ package cn.canos.esdslgraph.servlet;
  * @author harriszhang@live.cn
  * @date 2020/7/4.
  */
-public abstract class ResponseBase {
+public class FormatResponse {
+
+    private Object content;
 
     /**
      * 状态码
@@ -23,6 +25,14 @@ public abstract class ResponseBase {
      * e.printStackTrace();
      */
     private String stackTrace;
+
+    public Object getContent() {
+        return content;
+    }
+
+    public void setContent(Object content) {
+        this.content = content;
+    }
 
     public int getStatusCode() {
         return statusCode;

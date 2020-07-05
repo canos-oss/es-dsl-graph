@@ -60,7 +60,7 @@ app.controller('controller', function ($scope, $http) {
         $scope.thisEditor.gotoLine(1);
 
         var rpcRequest = JSON.stringify(json);
-        $http.post('api/format', { content: rpcRequest }).then(function (response) {
+        $http.post('format', { content: rpcRequest }).then(function (response) {
             if (response.data.statusCode != 1) {
                 swal("Error, maybe DSL is null or invalid");
                 return;
